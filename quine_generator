@@ -1,0 +1,4 @@
+(f = (i) => {
+  S = '(f=' + f.toString().split(String.fromCharCode(32)).join("").split(String.fromCharCode(10)).join("") + ')(0);' + "//";
+  console.log("eval("+String.fromCharCode(96)+require('zlib').inflateSync(Buffer.from('Base64変換、Deflate圧縮されたAA', "base64")).toString().split('').map(c => c === '1' ? (() => { i++; return (() => S.at((i - 1) % S.length))(); })() : c).join("")+String.fromCharCode(96)+".split('"+String.fromCharCode(32)+"').join('').split('"+String.fromCharCode(92)+"n').join(''))");
+})(0);
