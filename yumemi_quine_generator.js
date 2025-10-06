@@ -1,0 +1,4 @@
+(f = (i) => {
+  S = '(f=' + f.toString().split(String.fromCharCode(32)).join("").split(String.fromCharCode(10)).join("") + ')(0);' + "//";
+  console.log("eval("+String.fromCharCode(96)+require('zlib').inflateSync(Buffer.from('eJzNl0uWwyAMBPc+ha/A/S+XRbIIUgu1gtyE1fBpVdlg8ua67p/b8K0cQG1DqeJE2uwa0UoFnz0hzqiis+mDYDs22zqZj1ZmbSN2WcmoVRCwo+xjdZ8rjEp3Vc6/zq+VbVCa2vusLLf7HZPg/s3F6MWCXrJnx7PdZMcOZ/rJFhEpPULOdZRkd/hU5FNgxxWBD3GPYD1UQD0BPcDUI+XE40+o3UPpKVV+h8KbRnGX6ki3DHTf43q3xpJRrc9eRWN4NoxOQ+COGlQw+Q/Gx31xO2mMTJA1ToLxflllELaLrVHWj4xxcGTGaEdMLzMeoAtPFBXMjafa5o2TxsP2WGMUZIw/y8IjkhvPbV4bTIRB0niqhQ2x8SyUzTPBgrEpTBpPX/ryVdoiQZA3BsKUcXR/+2q2CA6WjVdjAxtZGmuMg1Vj/BjD/h2sLxrDsSbj71YyBtFnjT14uf4vjNGPg8j4BfdAHu4=', "base64")).toString().split('').map(c => c === '1' ? (() => { i++; return (() => S.at((i - 1) % S.length))(); })() : c).join("")+String.fromCharCode(96)+".split('"+String.fromCharCode(32)+"').join('').split('"+String.fromCharCode(92)+"n').join(''))");
+})(0);
